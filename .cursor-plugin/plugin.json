@@ -1,0 +1,13 @@
+{
+  "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
+  "name": "gxp-assurance",
+  "displayName": "GxP Assurance",
+  "version": "0.1.0",
+  "description": "Encode real GxP into Cursor: FDA CSA risk classification, 21 CFR Part 11 checklists, OQ scaffolds, RTM updates, and change-control packs for life-science software changes.",
+  "author": { "name": "Armin Demo" },
+  "homepage": "https://github.com/armin-demo/gxp-assurance",
+  "repository": "https://github.com/armin-demo/gxp-assurance",
+  "license": "MIT",
+  "keywords": ["gxp", "csa", "part-11", "csv", "alcoa", "life-sciences", "validation", "change-control"],
+  "logo": "assets/logo.svg"
+}

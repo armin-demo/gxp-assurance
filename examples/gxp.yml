@@ -1,0 +1,48 @@
+# Example critical-path map for a life-science / connected-care style system.
+# Copy to repo root as gxp.yml and adjust paths to your codebase.
+version: 1
+system: example-connected-care-companion
+predicate_hints:
+  - "May create/maintain device QMS or therapy-setting records (21 CFR 820 / QMSR context)"
+  - "E-signatures used in place of handwritten review/approval → Part 11 in scope"
+
+paths:
+  - path: "src/release/**"
+    risk: high_process_risk
+    urs: ["URS-010", "URS-012"]
+    notes: "Batch/therapy release decisions; dual e-sig"
+
+  - path: "src/esign/**"
+    risk: high_process_risk
+    urs: ["URS-012", "URS-014"]
+    notes: "E-signature meaning, linking, auth components"
+
+  - path: "src/audit/**"
+    risk: high_process_risk
+    urs: ["URS-020"]
+    notes: "Audit trail completeness; prior values not obscured"
+
+  - path: "src/alarms/**"
+    risk: high_process_risk
+    urs: ["URS-030"]
+    notes: "Alarm thresholds / hard-stops affecting patient or process safety"
+
+  - path: "src/settings/therapy/**"
+    risk: high_process_risk
+    urs: ["URS-031"]
+    notes: "Therapy parameters that drive delivery"
+
+  - path: "src/admin/roles/**"
+    risk: high_process_risk
+    urs: ["URS-040"]
+    notes: "Authority checks — who can approve"
+
+  - path: "src/ui/theme/**"
+    risk: not_high
+    urs: ["URS-090"]
+    notes: "Presentation only"
+
+  - path: "src/notifications/email-templates/**"
+    risk: not_high
+    urs: ["URS-091"]
+    notes: "Non-decision notifications"

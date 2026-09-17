@@ -1,0 +1,15 @@
+---
+description: GxP change hygiene for life-science software work
+alwaysApply: true
+---
+
+# GxP change hygiene
+
+When editing software that may create or maintain regulated records (manufacturing, device QMS, clinical, connected-care therapy/settings):
+
+1. **No silent Prod hotfixes** — every GxP-critical change needs impact assessment, proportionate testing, and promotion Dev → Qual → Prod.
+2. **Cite URS IDs** in generated tests for GxP-critical paths (`@urs URS-###`).
+3. **Classify CSA risk** (high_process_risk vs not_high) before choosing test rigor — prefer FDA CSA least-burdensome evidence.
+4. **Part 11 awareness** — e-sig meaning, audit trail (prior values not obscured), authority checks when touching e-records/e-signatures.
+5. **Be honest** — if coaching is synthetic/demo, say so; do not invent customer SOP IDs or fake CFR clause text.
+6. Prefer skills: `csa-risk-classify`, `part11-checklist`, `oq-scaffold`, `rtm-update`, `change-control-pack`.

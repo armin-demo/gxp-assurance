@@ -1,0 +1,10 @@
+{
+  "name": "gxp-assurance",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cursor plugin encoding real GxP / CSA / Part 11 practices for life-science software changes",
+  "license": "MIT",
+  "scripts": {
+    "validate": "node scripts/validate-plugin.mjs"
+  }
+}
